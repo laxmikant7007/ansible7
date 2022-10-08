@@ -1,13 +1,14 @@
---- 
-- hosts: all 
+---
+- hosts: all
   become: yes
   tasks:
-          - name: i want install tree 
+          - name: i want install tree
             apt:
                   name: tree
-                  state: present 
+                  state: absent
 
           - name: i want install wget
             apt:
                   name: wget
-                  state: present        
+                  state: absent
+      
